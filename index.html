@@ -1,2 +1,10 @@
-My GitHub Page
+---
+---
+++++ Short supports only html
+<p>
 {% include sidebar.html %}
+</p>
+++++
+Longer, but supports markdown
+{% capture sidebar %}{% include sidebar.html %}{% endcapture %}
+{{ sidebar | markdownify }}

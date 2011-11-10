@@ -1,0 +1,9 @@
+<h1>post</h1>
+<h2>yo</h2>
+
+<h3>Liquid templating</h3>
+{% for post in site.tags['yo'] %}
+    <li>
+      <h2>{{ post.title }}</h2>
+    </li>
+  {% endfor %}
