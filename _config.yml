@@ -5,6 +5,21 @@ permalink: none
 exclude: [less]
 
 ideal_tag_line: Moving ideas to the next level
+ideal_features_list: 
+  - Social engagement
+  - Idea creation
+  - Analytics
+  - Facebook & twitter integartion
+  - Slik design
+  - SEO freindly
+  - Plugable - planned to integrate to Drupal Appstore
+  - Ajax comments
+  - Adminstration reports
+  - Exportable widgets
+  - Fully customised
+  - Turnkey cloud hosting plan
+  - Multilingual
+  - Open source - Drupal 7 based
 ideal_in_the_box:
   - Home Page
   - Registartion

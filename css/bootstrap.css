@@ -2077,6 +2077,7 @@ width: 420px;
   position: fixed;
   width: 940px;
   background: url("../images/nav-tube.png") no-repeat scroll right -30px transparent;
+  z-index: 1000;
 }
 .top-nav {
   position: relative;
@@ -2107,4 +2108,14 @@ width: 420px;
 }
 .top-nav ul li.last {
   border-right: none;
+}
+/* contact */
+.contact-box {
+  background: #F5F5F5;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.contact-box dl {
+  padding: 20px;
 }
