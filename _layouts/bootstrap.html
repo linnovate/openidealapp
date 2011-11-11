@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Openidealapp</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+		
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
+		
+		
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+   <!-- <link href="../bootstrap-1.2.0.css" rel="stylesheet"> -->
+	 <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+		<div class="header">
+			<div class="container">
+      	<div class="row">
+					<div class="span6 columns"><img class="logo" src="images/logo.png"/></div>
+					<div class="span5 columns"><h1 class="logo-type">OPEN IDEAL</h1>
+					</div>
+				</div>
+				<div class="row tag-line">
+					<h2>{{ site.tag_line }}</h2>
+				</div>
+			</div>
+		</div>
+    <div class="container container-2">
+			<div class="hero-unit">
+					{% include mission.html %}				
+				<a class="btn primary large" href="#">Follow us on Twitter</a> or <a class="btn large" href="#">Contact us</a>
+			</div>
+			<div class="page-header">
+				<h2>Features</h2>
+			</div>
+      <!-- Example row of columns -->
+      <div class="row">
+					{% include feature-teasers.html %}
+			<div class="row">
+				<div class="span10">
+					<h3>What's in the box?</h3>
+					<ul >
+					  {% for item in site.ideal_in_the_box %}
+					    <li>{{ item }}</li>
+					  {% endfor %}
+					</ul>
+				</div>
+			</div>
+      <footer>
+        <p>&copy; Open Ideal by Linnovate 2011</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
