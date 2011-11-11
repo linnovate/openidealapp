@@ -1,61 +1,125 @@
 /* openideal.less
  * ---------------------------------------------------------------------------- */
-body {
+ body {
   #font > .serif(normal,@basefont,@baseline);
 }
 h1.logo-type {
-	background: url("../images//logo-type.png") no-repeat;
-	width:235px;
-	margin-top: 180px;
-	height:115px;
-	overflow:hidden;
-	text-indent:-9000px;
-	
+background: url("../images//logo-type.png") no-repeat scroll 0 0 transparent;
+height: 124px;
+margin-top: 160px;
+overflow: hidden;
+text-indent: -9000px;
+width: 287px;
+ margin-left: 20px;
 }
 h2 {
-	font-family: 'PT Sans Caption', sans-serif;
-	color:#1b90c9;
-	font-size: 32px;
+font-family: 'PT Sans Caption', sans-serif;
+color: #1b90c9;
+font-size: 32px;
 }
 
 .header {
-	background: #77d2ed url("../images/bg-header.jpg") repeat-x top center;
-	overflow:hidden;
-  margin-top:0;
-	margin-bottom:40px;
-  padding:0;
-	height:420px;
+background: #77d2ed url("../images/bg-header.jpg") repeat-x top center;
+overflow: hidden;
+margin-top: 0;
+padding: 0;
+height: 420px;
 }
 .header .container {
-	background: url("../images/light-tube.png") no-repeat bottom left;
-	height:420px;
+background: url("../images/light-tube.png") no-repeat bottom left;
+height: 420px;
 }
 .hero-unit {
-	margin-top:0;
+margin-top: 0;
+margin-bottom: 0;
 }
+/* features */
+.features {
+background: url("../images/byc.jpg") no-repeat scroll 25px top transparent;
+padding-top: 240px;
+}
+.feature-icon {
+  background: url("../images/features-icons.png") no-repeat top left;
+  width:100px;
+  height:100px;
+}
+.analytics-icon {
+  background-position: -200px 0;
+}
+.idea-icon {
+  background-position: -100px 0;
+}
+.social-icon {
+  background-position: 0 0;
+}
+
+/* features  end */
 .container-2 {
-	
-	
+padding-top: 40px;
+background: url("../images/tube.jpg") no-repeat scroll 25px top transparent;
 }
 img.logo {
-	margin-left: 200px;
-	margin-top: 70px;
+margin-left: 230px;
+margin-top: 70px;
 }
 h1.logo {
 	/*
     height: 311px;
-    margin: 20px auto;
-    overflow: hidden;
-    text-align: center;
-    text-indent: -9000px;
-    width: 420px;
+margin: 20px auto;
+overflow: hidden;
+text-align: center;
+text-indent: -9000px;
+width: 420px;
 */
 }
-.tag-line h2{
-	text-align:center;
-	color:#ffffff;
-	margin-top:10px;
-	font-weight:normal;
+.tag-line h2 {
+text-align: center;
+color: #ffffff;
+margin-top: 10px;
+font-weight: normal;
 }
 .feature {
+}
+.nav-holder {
+  position: relative;
+  margin:0 auto;
+  width:940px;
+  overflow:hidden;
+}
+.navnav {
+  position: fixed;
+  width:940px;
+  background: url("../images/nav-tube.png") no-repeat scroll right -30px transparent;
+}
+.top-nav {
+position:relative;
+right:0;
+
+}
+.top-nav ul {
+right:0;
+float:right;
+margin-top:4px;
+margin-right:30px;
+display: block;
+border:2px solid #ccc;
+
+background: #FCFCFC;
+border-radius: 5px 5px 5px 5px;
+border-style: solid;
+font-size: 12px;
+font-weight: bold;
+font-family:arial;
+overflow: auto;
+}
+.top-nav ul li {
+float: left;
+padding: 5px 11px 5px 13px;
+display: inline;
+list-style-type: none;
+border-right:2px solid #ccc;
+font-weight: bold;
+}
+.top-nav ul li.last {
+  border-right:none;
 }

@@ -5,64 +5,103 @@
     <title>Openidealapp</title>
     <meta name="description" content="">
     <meta name="author" content="">
-		
-		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
-		
-		
+    
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
+    
+    
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
     <!-- Le styles -->
-   <!-- <link href="../bootstrap-1.2.0.css" rel="stylesheet"> -->
-	 <link href="css/bootstrap.css" rel="stylesheet">
+   <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   </head>
 
   <body>
-		<div class="header">
-			<div class="container">
-      	<div class="row">
-					<div class="span6 columns"><img class="logo" src="images/logo.png"/></div>
-					<div class="span5 columns"><h1 class="logo-type">OPEN IDEAL</h1>
-					</div>
-				</div>
-				<div class="row tag-line">
-					<h2>{{ site.ideal_tag_line }}</h2>
-				</div>
-			</div>
-		</div>
+    <div class="nav-holder">
+      <div class="navnav">
+        <div class="top-nav">
+      {% include top-nav.html %}
+        </div>
+      </div>
+    </div>
+    <div class="header" id="pos-home">
+      <div class="container"> 
+        <div class="row">
+          <div class="span6 columns"><img class="logo" src="images/logo.png"/></div>
+          <div class="span5 columns"><h1 class="logo-type">OPEN IDEAL</h1>
+          </div>
+        </div>
+        <div class="row tag-line">
+          <h2>{{ site.ideal_tag_line }}</h2>
+        </div>
+      </div>
+    </div>
     <div class="container container-2">
-			<div class="hero-unit">
-					{% include mission.html %}				
-				<a class="btn primary large" href="#">Follow us on Twitter</a> or <a class="btn large" href="#">Contact us</a>
-			</div>
-			<div class="page-header">
-				<h2>Features</h2>
-			</div>
+      <div class="hero-unit">
+          {% include mission.html %}        
+        <a class="btn primary large" href="http://twitter.com/#!/openidealapp">Follow us on Twitter</a> or <a class="gotohash btn large" href="#pos-contact">Contact us</a>
+      </div>
+      <div id="pos-features"></div>
+      <div class="page-header features">
+        <h2>Features</h2>
+      </div>
       <!-- Example row of columns -->
       <div class="row">
-					{% include feature-teasers.html %}
-			<div class="row">
-				<div class="span10">
-					<h3>What's in the box?</h3>
-					<ul >
-					  {% for item in site.ideal_in_the_box %}
-					    <li>{{ item }}</li>
-					  {% endfor %}
-					</ul>
-				</div>
-			</div>
+          {% include feature-teasers.html %}
+      </div>
+      <div class="row">
+        <div class="span10">
+          <h3>What's in the box?</h3>
+          <ul >
+            {% for item in site.ideal_in_the_box %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="page-header contact">
+        <h2 id="pos-contact">Contact</h2>
+      </div>
+      <div class="row"><div class="span10">
+        <dl>
+          <dt>Contact form</dt>
+            <dd><a href="http://www.linnovate.net/contact">http://www.linnovate.net/contact</a></dd>
+          <dt>email</dt>
+            <dd><a href="mailto:openidealapp@linnovate.net">openidealapp@linnovate.net</a></dd>
+          <dt>twitter</dt>
+            <dd><a href="http://twitter.com/#!/openidealapp">@openidealapp</a></dd>
+        </dl>
+      </div></div>
       <footer>
-        <p>&copy; Open Ideal by Linnovate 2011</p>
+        <p>Openidealapp is a <a href="http://drupal.org">Drupal</a> open source distribution made by <a href="http://linnovate.net">Linnovate</a></p>
       </footer>
 
     </div> <!-- /container -->
+    <!-- The JavaScript -->
+            
+            <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+            <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+            <script type="text/javascript">
+                $(function() {
+                    $('.nav-holder ul a, a.gotohash').bind('click',function(event){
+                        var $anchor = $(this);
 
+                        $('html, body').stop().animate({
+                            scrollTop: $($anchor.attr('href')).offset().top
+                        }, 1500,'easeInOutExpo');
+                        /*
+                        if you don't want to use the easing effects:
+                        $('html, body').stop().animate({
+                            scrollTop: $($anchor.attr('href')).offset().top
+                        }, 1000);
+                        */
+                        event.preventDefault();
+                    });
+                });
+            </script>
   </body>
 </html>
