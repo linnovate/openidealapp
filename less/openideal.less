@@ -3,6 +3,12 @@
  body {
   #font > .serif(normal,@basefont,@baseline);
 }
+/* label */
+.label {
+  font-family:arial;
+  font-size:9px;
+}
+
 h1.logo-type {
 background: url("../images//logo-type.png") no-repeat scroll 0 0 transparent;
 height: 124px;
@@ -32,6 +38,7 @@ height: 420px;
 .hero-unit {
 margin-top: 0;
 margin-bottom: 0;
+padding:45px;
 }
 /* features */
 .features {
@@ -52,8 +59,49 @@ padding-top: 240px;
 .social-icon {
   background-position: 0 0;
 }
+.full-feature-icon {
+  background: url("../images/features-icons.png") repeat-x 0 -100px;
+  padding-top:100px
+}
 
-/* features  end */
+/* full features list */
+
+.full-features-list ul.row  {
+  list-style-type: none;
+  padding: 0;
+  margin-left:0;
+}
+.full-features-list ul.row li {
+    background-image: url("../images/v-bullet.png");
+    background-position: 0 4px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    margin:0;
+}
+.li-left {
+  clear:left
+}
+.li-right{
+  clear:right
+}
+// ---
+
+/* in the box*/
+
+.in-the-box ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left:0;
+}
+
+.in-the-box ul li {
+   background-image: url("../images/sqr-bullet.png");
+    background-position: 0 4px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    margin:0;
+}
+// ---
 .container-2 {
 padding-top: 40px;
 background: url("../images/tube.jpg") no-repeat scroll 25px top transparent;
@@ -131,4 +179,7 @@ font-weight: bold;
 }
 .contact-box dl {
   padding:20px;
+}
+.team {
+  margin-bottom:10px;
 }

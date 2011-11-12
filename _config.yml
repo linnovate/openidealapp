@@ -12,27 +12,25 @@ ideal_features_list:
   - Facebook & twitter integartion
   - Slik design
   - SEO freindly
-  - Plugable - planned to integrate to Drupal Appstore
+  - Plugable - Drupal Appstore <span class="label notice">Soon</span>
   - Ajax comments
   - Adminstration reports
   - Exportable widgets
   - Fully customised
-  - Turnkey cloud hosting plan
+  - Turnkey cloud hosting plan <span class="label notice">Soon</span>
   - Multilingual
   - Open source - Drupal 7 based
+  
 ideal_in_the_box:
   - Home Page
-  - Registartion
-  - Log in
   - Idea creation
   - Idea presentation + comments
   - Category / Tag page
   - Popular ideas
   - Recent ideas
-  - In-Process ideas
-  - Launched ideas
-  - Profile page (My page + someone else\'s page)
+  - Profile page
   - Search for ideas
   - Search for members
   - Project page
+  - Trends & analytics reports
   - Q&A

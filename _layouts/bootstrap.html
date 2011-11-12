@@ -53,17 +53,17 @@
       <div class="row">
           {% include feature-teasers.html %}
       </div>
-      <div class="row">
-        <div class="span11">
-          <h3>Full features list</h3>
-          <ul >
+      <div class="row full-feature-icon">
+        <div class="span11 full-features-list">
+          <h4>Full features list</h4>
+          <ul class="row">
             {% for item in site.ideal_features_list %}
-              <li>{{ item }}</li>
+              <li class="span5 {% cycle 'li-left','li-right' %}">{{ item }}</li>
             {% endfor %}
           </ul>
         </div>
-        <div class="span5">
-          <h3>What's in the box?</h3>
+        <div class="span5 in-the-box">
+          <h4>What's in the box?</h4>
           <ul >
             {% for item in site.ideal_in_the_box %}
               <li>{{ item }}</li>
@@ -72,17 +72,23 @@
         </div>
       </div>
       <div class="page-header contact">
-        <h2 id="pos-contact">Contact</h2>
+        <h2 id="pos-contact">Team & Contact</h2>
       </div>
-      <div class="row"><div class="contact-box span11">
-          <dl>
-            <dt>Contact form</dt>
-              <dd><a href="http://www.linnovate.net/contact">http://www.linnovate.net/contact</a></dd>
-            <dt>email</dt>
-              <dd><a href="mailto:openidealapp@linnovate.net">openidealapp@linnovate.net</a></dd>
-            <dt>twitter</dt>
-              <dd><a href="http://twitter.com/#!/openidealapp">@openidealapp</a></dd>
-          </dl>
+      <div class="row"><div class="span11">
+          <div class="team">
+            {% capture team %}{% include team.md %}{% endcapture %}
+            {{ team | markdownify }}
+          </div>
+          <div class="contact-box">
+            <dl>
+              <dt>Contact form</dt>
+                <dd><a href="http://www.linnovate.net/contact">http://www.linnovate.net/contact</a></dd>
+              <dt>email</dt>
+                <dd><a href="mailto:openidealapp@linnovate.net">openidealapp@linnovate.net</a></dd>
+              <dt>twitter</dt>
+                <dd><a href="http://twitter.com/#!/openidealapp">@openidealapp</a></dd>
+            </dl>
+          </div>
         </div>
         <div class="span5">
           <script src="http://widgets.twimg.com/j/2/widget.js"></script>
@@ -90,10 +96,10 @@
           new TWTR.Widget({
             version: 2,
             type: 'profile',
-            rpp: 10,
+            rpp: 2,
             interval: 30000,
-            width: 'auto',
-            height: 500,
+            width: 250,
+            height: 300,
             theme: {
               shell: {
                 background: '#ffffff',
@@ -102,7 +108,7 @@
               tweets: {
                 background: '#ffffff',
                 color: '#7d7c7d',
-                links: '#0069D6'
+                links: '#5395e6'
               }
             },
             features: {
