@@ -42,7 +42,8 @@
     </div>
     <div class="container container-2">
       <div class="hero-unit">
-          {% include mission.html %}        
+           {% capture mission %}{% include mission.html %}{% endcapture %}
+            {{ mission | markdownify }}      
         <a class="btn primary large" href="http://twitter.com/#!/openidealapp">Follow us on Twitter</a> or <a class="gotohash btn large" href="#pos-contact">Contact us</a>
       </div>
       <div id="pos-features"></div>
